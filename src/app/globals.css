@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-milky-pink: #f8e0e6;
+  --color-milky-pink-light: #fdf2f5;
+  --color-milky-pink-dark: #e8b4c0;
+  --color-kawaii-pink: #f9a8c9;
+  --color-kawaii-heart: #e75480;
+  --color-soft-white: #fff9fb;
+  --color-lace: #f0c4d4;
+  --color-text-main: #6b3a5a;
+  --color-text-light: #9e6b8a;
+}
+
+/* Lace border pattern */
+.lace-border-top {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='20' viewBox='0 0 80 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20 Q10 0 20 20 Q30 0 40 20 Q50 0 60 20 Q70 0 80 20' fill='none' stroke='%23f0c4d4' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: bottom;
+  height: 20px;
+}
+
+.lace-border-bottom {
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='20' viewBox='0 0 80 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0 Q10 20 20 0 Q30 20 40 0 Q50 20 60 0 Q70 20 80 0' fill='none' stroke='%23f0c4d4' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: repeat-x;
+  background-position: top;
+  height: 20px;
+}
+
+/* Floating hearts animation */
+@keyframes float-heart {
+  0% { transform: translateY(0) rotate(0deg); opacity: 0.7; }
+  50% { transform: translateY(-20px) rotate(10deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(-5deg); opacity: 0.7; }
+}
+
+.heart-float {
+  animation: float-heart 3s ease-in-out infinite;
+}
+
+.heart-float-delay-1 { animation-delay: 0.5s; }
+.heart-float-delay-2 { animation-delay: 1s; }
+.heart-float-delay-3 { animation-delay: 1.5s; }
+.heart-float-delay-4 { animation-delay: 2s; }
+
+/* Kawaii sparkle */
+@keyframes sparkle {
+  0%, 100% { opacity: 0.3; transform: scale(0.8); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.sparkle {
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+body {
+  background-color: var(--color-soft-white);
+  color: var(--color-text-main);
+}
