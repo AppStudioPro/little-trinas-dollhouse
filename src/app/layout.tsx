@@ -24,7 +24,7 @@ export default function RootLayout({
         <header className="relative">
           <nav
             className="flex items-center justify-between px-6 py-4"
-            style={{ backgroundColor: "#f8e0e6" }}
+            style={{ backgroundColor: "#ffffff" }}
           >
             <div
               className="text-2xl font-bold tracking-wide"
@@ -82,7 +82,7 @@ export default function RootLayout({
         <div className="lace-border-top" />
         <footer
           className="text-center py-6 text-sm"
-          style={{ backgroundColor: "#f8e0e6", color: "#9e6b8a" }}
+          style={{ backgroundColor: "#ffffff", color: "#9e6b8a" }}
         >
           <p>♡ Made with love by Princess Trina ♡</p>
           <p className="text-xs mt-1" style={{ color: "#c4899e" }}>
