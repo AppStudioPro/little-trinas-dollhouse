@@ -28,7 +28,7 @@ export default function Home() {
         {/* Character illustration */}
         <div>
           <Image
-            src="/trina-logo-girl.png"
+            src="/trina-girl-new.png"
             alt="Princess Trina"
             width={500}
             height={500}

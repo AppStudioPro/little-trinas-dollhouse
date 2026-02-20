@@ -55,21 +55,23 @@ export default function RootLayout({
               ))}
             </div>
           </nav>
-          <div className="lace-border-bottom" />
+          <div style={{ width: "100%", lineHeight: 0 }}>
+            <Image src="/lace-border.png" alt="" width={1200} height={60} style={{ width: "100%", height: "auto", display: "block" }} unoptimized />
+          </div>
         </header>
 
         {/* Floating hearts decoration */}
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
-          {[...Array(8)].map((_, i) => (
+          {[...Array(16)].map((_, i) => (
             <div
               key={i}
               className={`absolute heart-float heart-float-delay-${i % 5}`}
               style={{
-                left: `${8 + i * 12}%`,
-                top: `${15 + (i * 17) % 70}%`,
+                left: `${(i * 6.5) % 95}%`,
+                top: `${(i * 13 + 5) % 85}%`,
                 opacity: 0.35,
-                width: `${40 + (i % 3) * 20}px`,
-                height: `${40 + (i % 3) * 20}px`,
+                width: `${35 + (i % 4) * 15}px`,
+                height: `${35 + (i % 4) * 15}px`,
               }}
             >
               <Image
@@ -88,7 +90,9 @@ export default function RootLayout({
         <main className="relative z-10">{children}</main>
 
         {/* Footer */}
-        <div className="lace-border-top" />
+        <div style={{ width: "100%", lineHeight: 0, transform: "scaleY(-1)" }}>
+          <Image src="/lace-border.png" alt="" width={1200} height={60} style={{ width: "100%", height: "auto", display: "block" }} unoptimized />
+        </div>
         <footer
           className="text-center py-6 text-sm"
           style={{ backgroundColor: "#ffffff", color: "#9e6b8a" }}
