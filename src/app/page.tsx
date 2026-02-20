@@ -25,14 +25,21 @@ export default function Home() {
           />
         </div>
 
-        {/* Character illustration */}
-        <div>
+        {/* Character illustration — heart shaped */}
+        <div
+          style={{
+            width: "420px",
+            height: "420px",
+            clipPath: "path('M 210 370 C 50 280 0 180 0 110 C 0 48 48 0 110 0 C 148 0 180 18 210 55 C 240 18 272 0 310 0 C 372 0 420 48 420 110 C 420 180 370 280 210 370 Z')",
+            overflow: "hidden",
+            position: "relative",
+          }}
+        >
           <Image
             src="/trina-girl-new.png"
             alt="Princess Trina"
-            width={500}
-            height={500}
-            style={{ objectFit: "contain" }}
+            fill
+            style={{ objectFit: "cover", objectPosition: "top center" }}
             priority
           />
         </div>
