@@ -29,7 +29,7 @@ export default function RootLayout({
           >
             <div
               className="text-2xl font-bold tracking-wide"
-              style={{ fontFamily: "'Sacramento', cursive", color: "#e75480", fontSize: "2rem" }}
+              style={{ fontFamily: "'Sacramento', cursive", color: "#f9a8c9", fontSize: "2rem" }}
             >
               ♡ Little Trina&apos;s Dollhouse ♡
             </div>

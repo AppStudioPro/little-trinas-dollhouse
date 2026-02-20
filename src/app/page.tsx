@@ -42,7 +42,7 @@ export default function Home() {
       <div className="text-center max-w-lg">
         <h1
           className="text-4xl font-bold mb-4"
-          style={{ fontFamily: "'Sacramento', cursive", color: "#e75480" }}
+          style={{ fontFamily: "'Sacramento', cursive", color: "#f9a8c9" }}
         >
           ♡ Living in a world of dollies and dreams ♡
         </h1>
