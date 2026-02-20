@@ -30,8 +30,8 @@ export default function Home() {
           <Image
             src="/trina-logo-girl.png"
             alt="Princess Trina"
-            width={280}
-            height={280}
+            width={500}
+            height={500}
             style={{ objectFit: "contain" }}
             priority
           />
@@ -44,14 +44,8 @@ export default function Home() {
           className="text-4xl font-bold mb-4"
           style={{ fontFamily: "'Sacramento', cursive", color: "#e75480" }}
         >
-          ♡ Welcome, Little One ♡
+          ♡ Living in a world of dollies and dreams ♡
         </h1>
-        <p
-          className="text-xl italic mb-3"
-          style={{ fontFamily: "'Sacramento', cursive", color: "#c4789e" }}
-        >
-          Living in a world of dollies and dreams
-        </p>
         <p className="text-base leading-relaxed" style={{ color: "#6b3a5a" }}>
           Step inside Princess Trina&apos;s whimsical world of music, stories, games,
           and all things soft and sparkly. Make yourself at home! 🎀
