@@ -3,49 +3,39 @@ import Image from "next/image";
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] px-6 py-12">
-      {/* Hero section with lace border frame */}
-      <div className="w-full max-w-2xl mb-8">
-        {/* Top lace */}
-        <div style={{ height: "60px", backgroundImage: "url('/lace-border.png')", backgroundRepeat: "repeat-x", backgroundSize: "auto 100%" }} />
-
-        {/* Hero content */}
-        <div
-          className="flex flex-col items-center justify-center"
-          style={{
-            background: "linear-gradient(135deg, #fde8ef 0%, #fce4f4 50%, #f0d6f5 100%)",
-            borderLeft: "3px solid #f0c4d4",
-            borderRight: "3px solid #f0c4d4",
-            minHeight: "350px",
-            padding: "2rem",
-          }}
-        >
-          {/* Text logo */}
-          <div className="mb-4">
-            <Image
-              src="/trinaslogo.png"
-              alt="Little Trina's Dollhouse"
-              width={400}
-              height={120}
-              style={{ objectFit: "contain" }}
-              priority
-            />
-          </div>
-
-          {/* Character illustration */}
-          <div>
-            <Image
-              src="/trina-girl-new.png"
-              alt="Princess Trina"
-              width={500}
-              height={500}
-              style={{ objectFit: "contain" }}
-              priority
-            />
-          </div>
+      {/* Hero section */}
+      <div
+        className="w-full max-w-2xl rounded-3xl overflow-hidden mb-8 flex flex-col items-center justify-center"
+        style={{
+          background: "linear-gradient(135deg, #fde8ef 0%, #fce4f4 50%, #f0d6f5 100%)",
+          border: "3px solid #f0c4d4",
+          minHeight: "350px",
+          padding: "2rem",
+        }}
+      >
+        {/* Text logo */}
+        <div className="mb-4">
+          <Image
+            src="/trinaslogo.png"
+            alt="Little Trina's Dollhouse"
+            width={400}
+            height={120}
+            style={{ objectFit: "contain" }}
+            priority
+          />
         </div>
 
-        {/* Bottom lace (flipped) */}
-        <div style={{ height: "60px", backgroundImage: "url('/lace-border.png')", backgroundRepeat: "repeat-x", backgroundSize: "auto 100%", transform: "scaleY(-1)" }} />
+        {/* Character illustration */}
+        <div>
+          <Image
+            src="/trina-girl-new.png"
+            alt="Princess Trina"
+            width={500}
+            height={500}
+            style={{ objectFit: "contain" }}
+            priority
+          />
+        </div>
       </div>
 
       {/* Welcome text */}
