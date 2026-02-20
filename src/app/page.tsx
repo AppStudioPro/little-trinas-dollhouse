@@ -39,7 +39,7 @@ export default function Home() {
             src="/trina-girl-v3.png"
             alt="Princess Trina"
             fill
-            style={{ objectFit: "cover", objectPosition: "50% 15%" }}
+            style={{ objectFit: "contain", objectPosition: "50% 10%" }}
             priority
           />
         </div>
