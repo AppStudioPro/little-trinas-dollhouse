@@ -1,27 +1,40 @@
+import Image from "next/image";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[70vh] px-6 py-12">
-      {/* Hero section - image placeholder */}
+      {/* Hero section */}
       <div
-        className="w-full max-w-2xl rounded-3xl overflow-hidden mb-8 flex items-center justify-center"
+        className="w-full max-w-2xl rounded-3xl overflow-hidden mb-8 flex flex-col items-center justify-center"
         style={{
-          backgroundColor: "#f8e0e6",
+          background: "linear-gradient(135deg, #fde8ef 0%, #fce4f4 50%, #f0d6f5 100%)",
           border: "3px solid #f0c4d4",
           minHeight: "350px",
+          padding: "2rem",
         }}
       >
-        {/* Replace this div with Trina's image once provided */}
-        <div className="text-center p-8">
-          <p className="text-6xl mb-4">🏡</p>
-          <p
-            className="text-3xl font-bold mb-2"
-            style={{ fontFamily: "'Sacramento', cursive", color: "#e75480" }}
-          >
-            Welcome to the Dollhouse
-          </p>
-          <p className="text-sm" style={{ color: "#9e6b8a" }}>
-            ✨ Hero image coming soon ✨
-          </p>
+        {/* Text logo */}
+        <div className="mb-4">
+          <Image
+            src="/trinaslogo.png"
+            alt="Little Trina's Dollhouse"
+            width={400}
+            height={120}
+            style={{ objectFit: "contain" }}
+            priority
+          />
+        </div>
+
+        {/* Character illustration */}
+        <div>
+          <Image
+            src="/trina-logo-girl.png"
+            alt="Princess Trina"
+            width={280}
+            height={280}
+            style={{ objectFit: "contain" }}
+            priority
+          />
         </div>
       </div>
 
