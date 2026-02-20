@@ -30,7 +30,7 @@ export default function Home() {
           style={{
             width: "420px",
             height: "420px",
-            clipPath: "path('M 210 370 C 50 280 0 180 0 110 C 0 48 48 0 110 0 C 148 0 180 18 210 55 C 240 18 272 0 310 0 C 372 0 420 48 420 110 C 420 180 370 280 210 370 Z')",
+            borderRadius: "50%",
             overflow: "hidden",
             position: "relative",
             background: "linear-gradient(135deg, #c09dcc 0%, #d4b8e0 50%, #fefefe 100%)",
@@ -40,7 +40,7 @@ export default function Home() {
             src="/trina-girl-v3.png"
             alt="Princess Trina"
             fill
-            style={{ objectFit: "contain", objectPosition: "50% 20%" }}
+            style={{ objectFit: "cover", objectPosition: "50% 15%" }}
             priority
           />
         </div>
