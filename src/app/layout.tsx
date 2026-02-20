@@ -55,9 +55,7 @@ export default function RootLayout({
               ))}
             </div>
           </nav>
-          <div style={{ width: "100%", lineHeight: 0 }}>
-            <Image src="/lace-border.png" alt="" width={1200} height={60} style={{ width: "100%", height: "auto", display: "block" }} unoptimized />
-          </div>
+          <div style={{ width: "100%", height: "60px", backgroundImage: "url('/lace-border.png')", backgroundRepeat: "repeat-x", backgroundSize: "auto 100%" }} />
         </header>
 
         {/* Floating hearts decoration */}
@@ -90,9 +88,7 @@ export default function RootLayout({
         <main className="relative z-10">{children}</main>
 
         {/* Footer */}
-        <div style={{ width: "100%", lineHeight: 0, transform: "scaleY(-1)" }}>
-          <Image src="/lace-border.png" alt="" width={1200} height={60} style={{ width: "100%", height: "auto", display: "block" }} unoptimized />
-        </div>
+        <div style={{ width: "100%", height: "60px", backgroundImage: "url('/lace-border.png')", backgroundRepeat: "repeat-x", backgroundSize: "auto 100%", transform: "scaleY(-1)" }} />
         <footer
           className="text-center py-6 text-sm"
           style={{ backgroundColor: "#ffffff", color: "#9e6b8a" }}
