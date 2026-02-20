@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -59,19 +60,27 @@ export default function RootLayout({
 
         {/* Floating hearts decoration */}
         <div className="fixed top-0 left-0 w-full h-full pointer-events-none overflow-hidden z-0">
-          {["💗", "💕", "💖", "🩷", "♡", "💗", "💕", "💖"].map((heart, i) => (
-            <span
+          {[...Array(8)].map((_, i) => (
+            <div
               key={i}
-              className={`absolute text-xl heart-float heart-float-delay-${i % 5}`}
+              className={`absolute heart-float heart-float-delay-${i % 5}`}
               style={{
                 left: `${8 + i * 12}%`,
                 top: `${15 + (i * 17) % 70}%`,
-                opacity: 0.25,
-                fontSize: `${1 + (i % 3) * 0.5}rem`,
+                opacity: 0.35,
+                width: `${40 + (i % 3) * 20}px`,
+                height: `${40 + (i % 3) * 20}px`,
               }}
             >
-              {heart}
-            </span>
+              <Image
+                src="/heart.gif"
+                alt=""
+                width={60}
+                height={60}
+                style={{ objectFit: "contain", width: "100%", height: "100%" }}
+                unoptimized
+              />
+            </div>
           ))}
         </div>
 
