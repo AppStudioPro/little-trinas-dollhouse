@@ -36,10 +36,10 @@ export default function Home() {
           }}
         >
           <Image
-            src="/trina-girl-new.png"
+            src="/trina-girl-v3.png"
             alt="Princess Trina"
             fill
-            style={{ objectFit: "cover", objectPosition: "top center" }}
+            style={{ objectFit: "cover", objectPosition: "50% 15%" }}
             priority
           />
         </div>
