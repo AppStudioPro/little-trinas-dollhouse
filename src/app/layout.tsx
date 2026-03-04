@@ -19,6 +19,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Sacramento&display=swap"
           rel="stylesheet"
         />
+        <script src="https://cdn.lordicon.com/lordicon.js" defer />
       </head>
       <body className="min-h-screen" style={{ fontFamily: "'Quicksand', sans-serif" }}>
         {/* Header / Nav */}
@@ -36,21 +37,28 @@ export default function RootLayout({
             <div className="flex gap-2">
               {[
                 { label: "🏠 Home", href: "/" },
-                { label: "🎵 Music", href: "/music" },
+                { label: "Music", href: "/music", useLordicon: true },
                 { label: "🎮 Game", href: "/game" },
                 { label: "💖 About Me", href: "/about" },
               ].map((link) => (
                 <a
                   key={link.href}
                   href={link.href}
-                  className="px-4 py-2 rounded-full text-sm font-semibold transition-all hover:scale-105"
+                  className="px-4 py-2 rounded-full text-sm font-semibold transition-all hover:scale-105 flex items-center gap-1"
                   style={{
                     backgroundColor: "#fff9fb",
                     color: "#e75480",
                     border: "2px solid #f0c4d4",
                   }}
                 >
-                  {link.label}
+                  {link.useLordicon ? (
+                    <>
+                      <span dangerouslySetInnerHTML={{ __html: '<lord-icon src="https://cdn.lordicon.com/rdohrfni.json" trigger="hover" colors="primary:#e75480,secondary:#f9a8c9" style="width:20px;height:20px"></lord-icon>' }} />
+                      {link.label}
+                    </>
+                  ) : (
+                    link.label
+                  )}
                 </a>
               ))}
             </div>
